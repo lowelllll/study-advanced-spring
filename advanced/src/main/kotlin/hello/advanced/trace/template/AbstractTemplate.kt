@@ -1,0 +1,21 @@
+package hello.advanced.trace.template
+
+import hello.advanced.trace.logtrace.LogTrace
+import java.lang.Exception
+
+abstract class AbstractTemplate<T>(private val trace: LogTrace) {
+
+    protected abstract fun call(): T
+
+    fun execute(message: String): T {
+        val status = trace.begin(message)
+        try {
+            val result = call()
+            trace.end(status)
+            return result
+        } catch (e: Exception) {
+            trace.exception(status, e)
+            throw e;
+        }
+    }
+}
