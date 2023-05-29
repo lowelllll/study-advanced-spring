@@ -1,7 +1,8 @@
-package hello.advanced.trace.logtrace
+package hello.proxy.trace.logtrace
 
-import hello.advanced.trace.TraceId
-import hello.advanced.trace.TraceStatus
+import hello.proxy.trace.TraceId
+import hello.proxy.trace.TraceStatus
+
 
 class FieldLogTrace : LogTrace {
 

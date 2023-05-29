@@ -1,6 +1,6 @@
-package hello.advanced.trace.logtrace
+package hello.proxy.trace.logtrace
 
-import hello.advanced.trace.TraceStatus
+import hello.proxy.trace.TraceStatus
 
 interface LogTrace {
     fun begin(message: String): TraceStatus

@@ -1,4 +1,4 @@
-package hello.advanced.trace
+package hello.proxy.trace
 
 class TraceStatus(
     val traceId: TraceId,

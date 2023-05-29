@@ -1,6 +1,6 @@
-package hello.advanced.trace.template
+package hello.proxy.trace.template
 
-import hello.advanced.trace.logtrace.LogTrace
+import hello.proxy.trace.logtrace.LogTrace
 
 abstract class AbstractTemplate<T>(private val trace: LogTrace) {
 

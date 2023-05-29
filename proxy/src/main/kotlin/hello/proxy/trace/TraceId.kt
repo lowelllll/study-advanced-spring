@@ -1,4 +1,4 @@
-package hello.advanced.trace
+package hello.proxy.trace
 
 import java.util.*
 

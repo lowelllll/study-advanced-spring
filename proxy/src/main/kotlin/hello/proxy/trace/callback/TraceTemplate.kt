@@ -1,6 +1,7 @@
-package hello.advanced.trace.callback
+package hello.proxy.trace.callback
 
-import hello.advanced.trace.logtrace.LogTrace
+import hello.proxy.trace.logtrace.LogTrace
+
 
 class TraceTemplate(val trace: LogTrace) {
 
