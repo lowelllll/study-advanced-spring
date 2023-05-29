@@ -1,12 +1,12 @@
-package hello.proxy.config.v1_proxy.interface_proxy
+package hello.proxy.config.v1_proxy.concrete_proxy
 
-import hello.proxy.app.v1.OrderControllerV1
+import hello.proxy.app.v2.OrderControllerV2
 import hello.proxy.trace.logtrace.LogTrace
 
-class OrderControllerInterfaceProxy(
-    private val target: OrderControllerV1,
+class OrderControllerConcreteProxy(
+    private val target: OrderControllerV2,
     private val logTrace: LogTrace
-) : OrderControllerV1 {
+) : OrderControllerV2(target.orderServiceV2) {
 
     override fun request(itemId: String): String {
         val status = logTrace.begin("OrderController.request()")
