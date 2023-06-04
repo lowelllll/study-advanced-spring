@@ -16,6 +16,7 @@ class InterfaceProxyConfig {
         return OrderControllerInterfaceProxy(OrderControllerV1Impl(orderService(logTrace)), logTrace)
     }
 
+    @Bean
     fun orderService(logTrace: LogTrace): OrderServiceV1 {
         return OrderServiceInterfaceProxy(OrderServiceV1Impl(orderRepository(logTrace)), logTrace)
     }

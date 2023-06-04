@@ -18,6 +18,7 @@ class ConcreteProxyConfig {
         return OrderControllerConcreteProxy(OrderControllerV2(orderServiceV2(logTrace)), logTrace)
     }
 
+    @Bean
     fun orderServiceV2(logTrace: LogTrace): OrderServiceV2 {
         return OrderServiceConcreteProxy(OrderServiceV2(orderRepositoryV2(logTrace)), logTrace)
     }
