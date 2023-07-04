@@ -1,11 +1,13 @@
 package hello.aop.exam
 
+import hello.aop.exam.annotation.Retry
 import hello.aop.exam.annotation.Trace
 import org.springframework.stereotype.Repository
 
 @Repository
 class ExamRepository {
 
+    @Retry
     @Trace
     fun save(itemId: String): String {
         seq++
